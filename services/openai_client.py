@@ -44,11 +44,11 @@ def generate_paragraph(topic: str) -> str:
             input=[
                 {
                     "role": "system",
-                    "content": [{"type": "text", "text": instructions}],
+                    "content": [{"type": "input_text", "text": instructions}],
                 },
                 {
                     "role": "user",
-                    "content": [{"type": "text", "text": f"Topic: {topic.strip()}"}],
+                    "content": [{"type": "input_text", "text": f"Topic: {topic.strip()}"}],
                 },
             ],
         )
